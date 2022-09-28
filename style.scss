@@ -1,0 +1,514 @@
+$primary-color: #ED2082;
+$second-primary-color: #282ECE;
+$secondary-color: #131669;
+$second-secondary-color: #070816;
+$disabled-color: #535366;
+
+$primary-font: 'Quicksand', sans-serif;
+$secondary-font: 'Cardo', serif;
+$third-font: 'Roboto Mono', monospace;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: greenEnergy;
+    src: url(./fonts/Green_Energy.ttf);
+}
+
+body {
+    background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%), #FFFFFF;
+    color: #FFFFFF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 36px;
+
+    #monster {
+        width: 50vw;
+    }
+
+    nav {
+        display: none;
+        width: 100vw;
+        cursor: pointer;
+    }
+}
+
+#hamburgerMenu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 200vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    #nav {
+        display: none;
+        height: 600px;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #171669;
+        border-radius: 0px 0px 195px 0px;
+    
+        svg {
+            position: absolute;
+            left: 75%;
+            top: 5%;
+        }
+    
+        nav {
+            height: 300px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between;
+            width: 70%;
+            margin: auto;
+            margin-top: 30%;
+    
+            li {
+                font-family: $primary-font;
+                font-weight: 700;
+                font-size: 3.25rem;
+            }
+    
+            #active {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+main {
+    #bigImg {
+        display: none;
+    }
+
+    img {
+        width: 100vw;
+        height: auto;
+        border-top: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+    }
+
+    #content {
+        background-color: $second-secondary-color;
+        margin-top: 20px;
+
+        h1 {
+            text-align: center;
+            font-family: greenEnergy;
+            font-weight: 400;
+            font-size: 4.375rem;
+            line-height: 80px;
+            padding-top: 40px;
+            background: linear-gradient(91.1deg, $primary-color 12.97%, $second-primary-color 81.03%), #FFFFFF;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-family: $secondary-font;
+            font-weight: 400;
+            margin: 30px;
+        }
+
+        h3 {
+            font-family: $primary-font;
+            font-weight: 600;
+            font-size: 2rem;
+            margin: 30px;
+            margin-top: 60px;
+        }
+
+        h2 {
+            font-family: $primary-font;
+            font-weight: 600;
+            font-size: 2.625rem;
+            margin: 30px;
+            margin-top: 60px;
+            margin-bottom: 0;
+        }
+
+        svg {
+            width: 70vw;
+            height: auto; 
+            padding: 40px;
+            display: block;
+            margin: auto;
+        } 
+    }
+
+    #cards {
+        article {
+            background-color: $second-secondary-color;
+            border: 2px solid #FFFFFF;
+            border-radius: 15px;
+            margin: 35px;
+            padding: 10px;
+
+            h3 {
+                font-family: $primary-font;
+                font-weight: 500;
+                font-size: 1.625rem;
+                text-align: center;
+                margin: 30px;
+            }
+
+            p {
+                font-family: $secondary-font;
+                font-weight: 400;
+                font-size: 1.25rem;
+                margin: 30px;
+            }
+
+            &:hover {
+                background-color: #FFFFFF;
+                color: $second-secondary-color;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $secondary-color;
+    width: 100vw;
+
+    #contact {
+        display: flex;
+        justify-content: space-between;
+        padding: 45px 40px;
+
+        p {
+            color: $primary-color;
+            font-family: $secondary-font;
+            font-weight: 400;
+            font-size: 1rem;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    #signUp {
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 329px;
+            height: 45px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        form {
+            text-align: center;
+            padding: 20px;
+
+            button {
+                background: linear-gradient(180deg, rgba(48, 43, 248, 0) 0%, rgba(0, 0, 0, 0.55) 100%), $primary-color;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                color: #FFFFFF;
+                border: none;
+                font-size: 1.5rem;
+                font-family: $third-font;
+                font-style: normal;
+                font-weight: 500;
+                padding: 10px 20px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                cursor: pointer;
+
+                &:hover {
+                    border: 2px solid #FFFFFF;
+                }
+
+                &:disabled {
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%), $disabled-color;
+                    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+
+    h2 {
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 1.625rem;
+    }
+}
+
+#cookies {
+    background-color: $second-secondary-color;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+
+    h2 {
+        font-family: $third-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin: 10px 50px;
+    }
+
+    #secondaryBtn {
+        background: linear-gradient(180deg, rgba(40, 46, 206, 0.55) 0%, rgba(19, 22, 105, 0.55) 100%), $second-primary-color;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+
+        &:hover {
+            border: 2px solid #FFFFFF;
+        }
+
+        &:disabled {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%), #57576B;
+            box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    #primaryBtn {
+        background: linear-gradient(180deg, rgba(48, 43, 248, 0) 0%, rgba(0, 0, 0, 0.55) 100%), $primary-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        &:hover {
+            border: 2px solid #FFFFFF;
+        }
+
+        &:disabled {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%), $disabled-color;
+            box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    button {
+        border-radius: 10px;
+        border: none;
+        padding: 10px 20px;
+        font-family: $third-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    #buttons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    #hamburgerMenu {
+        #nav {
+            svg {
+                left: 85%;
+                top: 5%;
+            }
+
+            nav {
+                width: 40%;
+                margin-top: 20%;
+            }
+        }
+    }
+
+    main {
+        #bigImg {
+            display: block;
+        }
+
+        #smalImg {
+            display: none;
+        }
+
+        #content {
+            width: 80%;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 40px;
+            padding-bottom: 100px;
+
+            p {
+                margin: 10px 50px 40px 50px;
+            }
+
+            h3 {
+                margin: 0 50px;
+            }
+
+            h2 {
+                width: 50%;
+                margin: auto;
+                margin-top: 80px;
+                margin-bottom: 30px;
+            }
+
+            svg {
+                width: 60vw;
+            }
+        }
+
+        #cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-left: 50px;
+            
+            article {
+                width: 280px;
+                padding: 0;
+            }
+        }
+    }
+
+    footer {
+        #contact {
+            margin: 100px;
+            padding: 0;
+            padding-top: 40px;
+
+            p {
+                margin-top: 20px;
+            }
+        }
+
+        #signUp {
+            margin: 0 100px;
+            h2 {
+                text-align: start;
+            }
+
+            form {
+                text-align: start;
+                margin: 0;
+                padding: 0;
+
+                input {
+                    width: 430px;
+                }
+
+                button {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+
+    #cookies {
+        width: 100vw;
+        display: flex;
+
+        h2 {
+            width: 40%;
+            text-align: start;
+        }
+
+        #buttons {
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        nav {
+            display: flex;
+            list-style-type: none;
+            font-family: $primary-font;
+            font-weight: 700;
+            font-size: 3.25rem;
+            justify-content: end;
+
+            li {
+                margin-left: 40px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        #menu {
+            display: none;
+        }
+
+        #active {
+            color: $primary-color;
+        }
+    }
+
+    main {
+        #content {
+            width: 90%;
+            display: flex;
+
+            h2 {
+                width: 55%;
+                text-align: center;
+            }
+
+            svg {
+                width: 35vw;
+            }
+        }
+
+        #cards {
+            margin-left: 0;
+            article {
+                width: 320px;
+                margin: auto;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        margin-top: 80px;
+
+        #contact {
+            width: 42%;
+            margin: 0;
+            padding: 0;
+            margin-left: 60px;
+            margin-top: 30px;
+        }
+
+        #signUp {
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            margin-left: 40px;
+            margin-top: 30px;
+        }
+    }
+
+    #cookies {
+        h2 {
+            width: 50%;
+        }
+
+        #buttons {
+            margin-left: 150px;
+        }
+    }
+}

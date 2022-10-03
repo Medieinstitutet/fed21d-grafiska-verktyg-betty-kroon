@@ -29,21 +29,21 @@ closeBtn.addEventListener("click", (e) => {
 })
 
 function firstCircel(){
-    gsap.to("#cirkel", {duration: 4, fill: "#282ECE", onComplete: secondCircle});
-    gsap.to("#cirkel2", {duration: 4, fill: "#131669", onComplete: secondCircle});
-    gsap.to("#cirkel3", {duration: 4, fill: "#ED2082", onComplete: secondCircle});
+    gsap.to("#circle", {duration: 4, fill: "#282ECE", onComplete: secondCircle});
+    gsap.to("#circle2", {duration: 4, fill: "#131669", onComplete: secondCircle});
+    gsap.to("#circle3", {duration: 4, fill: "#ED2082", onComplete: secondCircle});
 }
 
 function secondCircle(){
-    gsap.to("#cirkel", {duration: 4, fill: "#131669", onComplete: thirdCircle});
-    gsap.to("#cirkel2", {duration: 4, fill: "#ED2082", onComplete: thirdCircle});
-    gsap.to("#cirkel3", {duration: 4, fill: "#282ECE", onComplete: thirdCircle});
+    gsap.to("#circle", {duration: 4, fill: "#131669", onComplete: thirdCircle});
+    gsap.to("#circle2", {duration: 4, fill: "#ED2082", onComplete: thirdCircle});
+    gsap.to("#circle3", {duration: 4, fill: "#282ECE", onComplete: thirdCircle});
 }
 
 function thirdCircle(){
-    gsap.to("#cirkel", {duration: 4, fill: "#ED2082", onComplete: firstCircel});
-    gsap.to("#cirkel2", {duration: 4, fill: "#282ECE", onComplete: firstCircel});
-    gsap.to("#cirkel3", {duration: 4, fill: "#131669", onComplete: firstCircel});
+    gsap.to("#circle", {duration: 4, fill: "#ED2082", onComplete: firstCircel});
+    gsap.to("#circle2", {duration: 4, fill: "#282ECE", onComplete: firstCircel});
+    gsap.to("#circle3", {duration: 4, fill: "#131669", onComplete: firstCircel});
 }
 
 firstCircel();
